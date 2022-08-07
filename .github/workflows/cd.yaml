@@ -15,7 +15,7 @@ jobs:
         with:
           username: tiagodfigueiredo
           password: Batatinhafrita123@
-          repository: tiagodfigueiredo7/argocd
+          repository: tiagodfigueiredo/argocd
           tags: ${{ github.sha }}, latest
 
   deploy: 
