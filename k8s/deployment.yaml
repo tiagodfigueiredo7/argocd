@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment        # aqui estamos escolhendo o serviço deployment
+metadata:
+  name: goapp
+spec:
+  replicas: 5
+  selector:            
+    matchLabels:
+      app: goapp
+  template:
+    metadata:
+      labels:
+        app: goapp
+    spec:
+      containers:
+      - name: goapp
+        image: goapp
+        ports:
+        - containerPort: 8080
