@@ -1,4 +1,6 @@
 # argocd
 
 
-estudeo de pipiline
+atualizando curso
+
+
