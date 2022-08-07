@@ -5,13 +5,8 @@ resources:
 - service.yaml
  
 namespace: goapp
-
+ 
 images:
 - name: goapp
-<<<<<<< HEAD
   newName: goapp
   newTag: v1
-=======
-  newName: tiagodfigueiredo/argocd
-  newTag: 87c688db1a91d15a280dfe6f6c0d72768ac379ef
->>>>>>> bb2ecfb28445671f884f75c87d7338f452252638
