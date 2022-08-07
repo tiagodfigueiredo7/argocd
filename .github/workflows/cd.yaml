@@ -17,3 +17,33 @@ jobs:
           password: Leuviah761@
           repository: tiagodfigueiredo/argocd
           tags: ${{ github.sha }}, latest
+
+  deploy: 
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: kustomize
+        uses: imranismail/setup-kustomize@v1
+        with:
+          kustomize_version: v3.6.1
+      
+      - name: update k8s
+        run: |
+          cd k8s
+          kustomize edit set image goapp=tiagodfigueiredo/argocd:${{ github.sha }}
+          cat Kustomization.yaml
+
+      - name: commit
+        run: | 
+         git config --local user.mail "tiagodfigueiredo@gmail.com"
+         git config --local user.name "tiagodfigueiredo7"
+         git commit -am "change image tag"
+
+      - name: push
+        uses: ad-m/github-push-action@master
+        
+
