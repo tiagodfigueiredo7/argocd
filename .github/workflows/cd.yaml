@@ -15,7 +15,7 @@ jobs:
         with:
           username: tiagodfigueiredo
           password: Batatinhafrita123@
-          repository: tiagodfigueiredo/argocd
+          repository: tiagodfigueiredo7/argocd
           tags: ${{ github.sha }}, latest
 
   deploy: 
@@ -38,7 +38,7 @@ jobs:
           cat kustomization.yaml
 
       - name: commit
-        run: | 
+        run: |
          git config --local user.mail "tiagodfigueiredo@gmail.com"
          git config --local user.name "tiagodfigueiredo7"
          git commit -am "change image tag"
