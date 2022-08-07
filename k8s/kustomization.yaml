@@ -9,4 +9,4 @@ namespace: goapp
 images:
 - name: goapp
   newName: goapp
-  newTag: goapp
+  newTag: v1
