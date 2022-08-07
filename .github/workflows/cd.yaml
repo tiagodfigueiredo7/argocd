@@ -35,7 +35,7 @@ jobs:
         run: |
           cd k8s
           kustomize edit set image goapp=tiagodfigueiredo/argocd:${{ github.sha }}
-          cat Kustomization.yaml
+          cat kustomization.yaml
 
       - name: commit
         run: | 
@@ -45,5 +45,5 @@ jobs:
 
       - name: push
         uses: ad-m/github-push-action@master
-        
+
 
