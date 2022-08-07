@@ -14,6 +14,6 @@ jobs:
         uses: docker/build-push-action@v1.1.0
         with:
           username: tiagodfigueiredo
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: Leuviah761@
           repository: tiagodfigueiredo/argocd
           tags: ${{ github.sha }}, latest
