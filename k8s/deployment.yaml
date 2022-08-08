@@ -3,7 +3,7 @@ kind: Deployment        # aqui estamos escolhendo o serviço deployment
 metadata:
   name: goapp
 spec:
-  replicas: 3
+  replicas: 1
   selector:            
     matchLabels:
       app: goapp
