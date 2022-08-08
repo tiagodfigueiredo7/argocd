@@ -3,7 +3,7 @@ kind: Deployment        # aqui estamos escolhendo o serviço deployment
 metadata:
   name: goapp
 spec:
-  replicas: 10
+  replicas: 2
   selector:            
     matchLabels:
       app: goapp
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: goapp
-        image: goapp
+        image: tiagodfigueiredo/argocd:6.0
         ports:
         - containerPort: 8080
