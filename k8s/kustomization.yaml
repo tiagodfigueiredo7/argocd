@@ -9,4 +9,4 @@ namespace: goapp
 images:
 - name: goapp
   newName: tiagodfigueiredo/argocd
-  newTag: 4dadcc76716744af4c7e94fb12c5bc51d7d5a157
+  newTag: 29517d8951a1a09db72579800f0046bcd7984d01
