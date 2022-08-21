@@ -12,7 +12,7 @@ func main() {
 		
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("<h1>teste domingo dia 21/08 agosto , ! </h1>"))
+		w.Write([]byte("<h1>teste domingo dia 21/08 agosto , 14:15 ! </h1>"))
 
 	})
 
